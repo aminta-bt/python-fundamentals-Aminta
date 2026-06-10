@@ -13,8 +13,15 @@ def analyze_text(text):
     }
 
 if __name__ == "__main__":
-    with open("sample.txt", "r") as file:
-        content = file.read()
+    try:
+        with open("sample.txt", "r") as file:
+            content = file.read()
 
-    results = analyze_text(content)
-    print(results)
+        results = analyze_text(content)
+
+        print("Total Characters:", results["total_characters"])
+        print("Total Words: ", results["total_words"])
+        print("Unique Words: ", results["unique_words"])
+
+    except FileNotFoundError:
+        print("Error! The file 'sample.txt' was not found.")
