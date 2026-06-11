@@ -21,28 +21,33 @@ All scripts can be run from the command line. Open your terminal inside Visual S
 Converts user-specified temperature values between Celsius and Fahrenheit while validating numeric input.
 ```bash
 python exercises/01_temperature.py
+```
 
 ### Exercise 2: Word & Character Counter
 Reads an external text asset (`sample.txt`) to dynamically calculate total characters, total words, and case-insensitive unique word counts, returning the final data inside a structured dictionary.
 *Note: Ensure a text file named `sample.txt` exists in your main project folder before running*
 ```bash
 python exercises/02_counter.py
+```
 
 ### Exercise 3: Configurable FizzBuzz
 An upgraded variation of the classic loop algorithm that takes function parameters directly from user. It includes validation gates to prevent crashes from non-numeric inputs or zero-division scenarios.
 ```bash
 python exercises/03_fizzbuzz.py
+```
 
 ### Exercise 4: In-Memory Contact Book
 A menu-driven command-line program that manages contact entries using a list of dictionaries. It supports adding data, listing stored records, and applying case-insensitive lookup filters.
 ```bash
 python exercises/04_contacts.py
+```
 
 ### Exercise 5: Sales CSV Analysis
 Utilizes Python's built-in `csv.DictReader` to parse metrics line-by-line from `sales.csv`. The program calculates total revenue, transactional averages, and identifies the highest-earning product using dictionary lookups.
 *Note: Ensure a text file named `sales.csv` exists in your main project folder before running*
 ```bash
 python exercises/05_sales.py
+```
 
 ---
 
