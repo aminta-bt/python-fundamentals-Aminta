@@ -1,4 +1,4 @@
-"""CONTACT BOOK UTILITY.
+"""CONTACT BOOK.
 A text-menu interface to add, list, and search for contacts using a list of dictionaries.
 """
 
@@ -14,12 +14,12 @@ def main():
 
     while True:
         show_menu()
-        choice = input("Choose an option (1-4): ")
+        choice = input("Choose an option (1-4): ").strip()
 
         if choice == "1":
-            name = input("Enter name: ")
-            phone = input("Enter phone: ")
-            email = input("Enter email: ")
+            name = input("Enter name: ").strip()
+            phone = input("Enter phone: ").strip()
+            email = input("Enter email: ").strip()
 
             if not name:
                 print("Error! Name field cannot be empty!")
@@ -42,7 +42,7 @@ def main():
                     )
 
         elif choice == "3":
-            search_name = input("Enter name to search: ").strip()
+            search_name = input("Enter name to search: ").lower().strip()
             if not search_name:
                 print("Error! Search term cannot be empty.")
                 continue
@@ -50,7 +50,7 @@ def main():
             found = False
             print("\n*** Search Results ***")
             for contact in contacts:
-                if search_name in contact["name"]:
+                if search_name in contact["name"].lower():
                     print(
                         f"Name: {contact['name']}, "
                         f"Phone: {contact['phone']}, "
