@@ -6,21 +6,21 @@ Validates the input, in case the user types something that's not a number by pri
 def convert_temperature():
     print("***** Temperature Converter *****")
 
-    user_input_temperature = input("Enter the temperature value: ")
+    user_input_temperature = input("Enter the temperature value: ").strip()
     try:
         temperature = float(user_input_temperature)
     except ValueError:
         print("Error! Please enter a valid number (e.g. 44 or 16.12).")
         return
     
-    unit = input("Value in Celsius or Fahrenheit? (C/F):").upper()
+    unit = input("Value in Celsius or Fahrenheit? (C/F):").upper().strip()
 
     if unit == "C":
         converted = (temperature * 9 / 5) + 32
-        print(temperature, "°C is equal to", round(converted, 2), "°F.")
+        print(f"{temperature} °C is equal to {round(converted, 2)} °F.")
     elif unit == "F":
         converted = (temperature - 32) * 5 / 9
-        print(temperature, "°F is equal to", round(converted, 2), "°C.")
+        print(f"{temperature} °F is equal to {round(converted, 2)} °C.")
     else:
         print("Error! Invalid unit! Please enter 'C' or 'F'")
 
